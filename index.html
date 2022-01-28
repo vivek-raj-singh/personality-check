@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <title>Check personality</title>
+</head>
+<body>
+    <section>
+        <h1>WHAT DOES YOUR NAME MEANS ACCORDING TO THIS SITE</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label"> KINDLY ENTER YOUR NAME</label> <br>
+                <input type="text" name="" id="nameid">
+            </div>
+            <div class="imgdiv">
+                <img src="./download.jpeg" width="200"  height="200" class="imgchange">
+            </div>
+            <button>THOKO TAALI</button>
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const a = $('#nameid').val();
+                alert(a);
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${a}`);
+            })
+        });
+    </script>
+    
+</body>
+</html>
